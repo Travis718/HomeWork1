@@ -1,5 +1,7 @@
 package ru.geekbrains.lesson1;
 
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args)
     {
@@ -38,7 +40,8 @@ public class Main {
             System.out.println( "Число а число является отрицательным");
         }
 
-        // п. 8 Определяем високосность.
+
+               // п. 8 Определяем високосность.
         int m = 1983;
         if (!(m % 4 == 0) && (m % 100 == 0) && !(m % 400 == 0)) {
             System.out.println("Возрадуйтесь - этот год не високосный!");
@@ -47,9 +50,24 @@ public class Main {
         {
             System.out.println("Это високосный год");
         }
-        {
 
-        }
+        // п.7 передаем имя в качестве параметра
+        String str = "Привет, Ваня";
+
+        System.out.println(str);
+
+         sayHello( "Ваня");
                             }
+        static void sayHello(String name) {
+            System.out.println("Привет"  + name);
+            return;
+        }
 
+        //п.6 возвращаем true при условии - число отрицательное
+        // ломаем порядок пунктов домашки, поскольку в методе void return не работает
+
+        static boolean goBack(int a) {
+        if (a < 0) return true;
+        return false;
+        }
     }
